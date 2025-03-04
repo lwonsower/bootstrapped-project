@@ -10,13 +10,9 @@ app.use(express.json());
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-// Handle GET requests to /api route
+// GET routes
 app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
-});
-
-app.get("/a-new-route", (req, res) => {
-    res.json({ message: "New return message!" });
 });
 
 // All other GET requests not handled before will return our React app

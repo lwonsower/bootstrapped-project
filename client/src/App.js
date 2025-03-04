@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/a-new-route")
+    fetch("/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
